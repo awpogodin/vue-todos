@@ -5,6 +5,7 @@
         :todo="todo"
         :key="todo.id"
         v-on:onRemoveTodo="onRemoveTodo"
+        v-on:onToggleTodo="onToggleTodo"
       />
     </div>
 </template>
@@ -22,7 +23,10 @@ export default {
   },
   methods: {
     onRemoveTodo(id) {
-      this.$emit('removeTodo', id);
+      this.$emit('onRemoveTodo', id);
+    },
+    onToggleTodo(id) {
+      this.$emit('onToggleTodo', id);
     },
   },
 };

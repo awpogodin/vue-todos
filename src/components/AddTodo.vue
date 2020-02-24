@@ -27,7 +27,7 @@ export default {
   methods: {
     onAddHandler() {
       if (this.input.trim()) {
-        this.$emit('addTodo', this.input);
+        this.$emit('onAddTodo', this.input);
         this.input = '';
       }
     },

@@ -2,11 +2,12 @@
     <div class="todoItem">
       <v-checkbox
         color="#E91E63"
-        v-model="todo.completed"
+        v-bind:input-value="todo.completed"
+        v-on:change="$emit('onToggleTodo', todo.id)"
       />
       <span
         class="title"
-        v-on:click="todo.completed = !todo.completed"
+        v-on:click="$emit('onToggleTodo', todo.id)"
         :class="{done: todo.completed}"
       >
         {{todo.title}}
