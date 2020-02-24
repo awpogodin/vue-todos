@@ -1,5 +1,7 @@
 # vue-todos
 
+![todos](https://i.imgur.com/fW7M7lY.png "todos")
+
 ## Project setup
 ```
 npm install
